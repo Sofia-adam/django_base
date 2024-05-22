@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 2px solid black;
+          border-collapse: collapse;
+        }
+        
+        tr:nth-child(even) {
+          background-color: rgb(255, 255, 255);
+        }
+        
+       
+        </style>
+</head>
+
+<body align="center" style="background-color:rgb(55, 221, 182);">
+    <table align="center">
+            <tr>
+                <th>Employee_ID</th>
+                <th>Employee_Age</th>
+                <th>Employee_Name</th>
+                <th>Employee_Salary</th>
+            </tr>
+            {% for rec in records %}
+            <tr>
+                <th>{{ rec.eid }}</th>
+                <th>{{ rec.eage }}</th>
+                <th>{{ rec.ename }}</th>
+                <th>{{ rec.esalary}}</th>
+            </tr>
+            {% endfor %}
+    </table>
+    <br><br>
+    <a href="/in">Click here enter another employee</a>
+</body>
+</html>
